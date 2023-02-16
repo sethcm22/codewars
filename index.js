@@ -34,3 +34,27 @@ function century(year) {
 // It's just math, stop thinking so hard
 // Better solution: const century = year => Math.ceil(year/100)
 // ************
+// Cats and Shelves https://www.codewars.com/kata/62c93765cef6f10030dfa92b/train/javascript
+
+function solution(start, finish) {
+  let current = start;
+  let jumps = 0;
+  while (current < finish) {
+    if (finish - current >= 3) {
+      current += 3;
+      jumps++;
+    } else if (finish - current >= 1 && finish - current < 3) {
+      current++;
+      jumps++;
+    }
+  }
+  return jumps;
+}
+// **Much more clever solution, math again
+// function solution(start, finish){
+// let stepsToClimb = finish-start
+// let numBigJumps = Math.floor(stepsToClimb/3)
+// let numSmallJumps = stepsToClimb % 3
+// return numBigJumps + numSmallJumps
+// }
+// ***********
