@@ -24,3 +24,13 @@ function squareSum(numbers) {
   return sum;
 }
 // **********
+//Century From Year https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
+
+function century(year) {
+  if (year >= 1 && year <= 100) return 1;
+  else if (year % 100 === 0) return year / 100;
+  else return Math.floor(year / 100 + 1);
+}
+// It's just math, stop thinking so hard
+// Better solution: const century = year => Math.ceil(year/100)
+// ************
