@@ -58,3 +58,15 @@ function solution(start, finish) {
 // return numBigJumps + numSmallJumps
 // }
 // ***********
+// ASCII Total https://www.codewars.com/kata/572b6b2772a38bc1e700007a/train/javascript
+
+function uniTotal(string) {
+  let total = 0;
+  for (let i = 0; i < string.length; i++) {
+    let value = string.charCodeAt(i);
+    total = total + value;
+  }
+  return total;
+}
+// Could use spread/split then reduce, but is it more efficient?
+// const uniTotal = str => [...str].reduce((acc, char) => acc + char.charCodeAt(0), 0);
